@@ -1,0 +1,158 @@
+/**
+ * LoginPage styles
+ * Page-level layout and theming
+ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  .login-page {
+    background-color: #f8f9fa;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .login-page {
+    background-color: #0d0d1a;
+  }
+}
+
+.page-header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode header */
+@media (prefers-color-scheme: dark) {
+  .page-header {
+    border-bottom-color: #3d3d5c;
+  }
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.page-nav a,
+.page-nav .login-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.page-nav a:hover,
+.page-nav .login-link:hover {
+  color: var(--accent);
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-container-full {
+  width: 100%;
+  max-width: 480px;
+}
+
+.page-footer {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+/* Dark mode footer */
+@media (prefers-color-scheme: dark) {
+  .page-footer {
+    border-top-color: #3d3d5c;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .page-nav {
+    gap: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
