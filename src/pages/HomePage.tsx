@@ -12,9 +12,9 @@ export function HomePage() {
   return (
     <section className="home-section">
       <div className="hero">
-        <img src="./assets/hero.png" className="base" width="170" height="179" alt="" />
-        <img src="./assets/react.svg" className="framework" alt="React logo" />
-        <img src="./assets/vite.svg" className="vite" alt="Vite logo" />
+        <img src="../../src/assets/hero.png" className="base" width="170" height="179" alt="" />
+        <img src="../../src/assets/react.svg" className="framework" alt="React logo" />
+        <img src="../../src/assets/vite.svg" className="vite" alt="Vite logo" />
       </div>
       <div>
         <h1>Get started</h1>
